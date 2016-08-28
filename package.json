@@ -4,19 +4,25 @@
   "description": "Lib para validação de código de barras e linha digitalizável presente em boletos bancários. Compatível com Node 4.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tagliatti/Boleto-Validator-JS.git"
   },
   "keywords": [
-    "validator", "validation", "boleto", "boleto validator"
+    "validator",
+    "validation",
+    "boleto",
+    "boleto validator"
   ],
   "author": "Filipe Tagliatti <filipetagliatti@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Tagliatti/Boleto-Validator-JS/issues"
   },
-  "homepage": "https://github.com/Tagliatti/Boleto-Validator-JS"
+  "homepage": "https://github.com/Tagliatti/Boleto-Validator-JS",
+  "devDependencies": {
+    "mocha": "^3.0.2"
+  }
 }
