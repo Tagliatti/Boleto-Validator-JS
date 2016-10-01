@@ -1,5 +1,10 @@
 # Boleto Validator
 
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Test Coverage][coveralls-image]][coveralls-url]
+[![Coverage Status](https://img.shields.io/codecov/c/github/Tagliatti/Boleto-Validator-JS.svg)](https://codecov.io/github/Tagliatti/Boleto-Validator-JS)
+
 Lib para validação de código de barras e linha digitalizável presente em boletos bancários. Compatível com Node 4.
 
 Ela valida boletos do tipo convênio (conta de luz, água, IPTU...), que são compostos por 4 blocos de números:
