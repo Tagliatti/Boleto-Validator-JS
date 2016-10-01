@@ -1,6 +1,6 @@
 {
   "name": "boleto-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lib para validação de código de barras e linha digitalizável presente em boletos bancários. Compatível com Node 4.",
   "main": "index.js",
   "scripts": {
