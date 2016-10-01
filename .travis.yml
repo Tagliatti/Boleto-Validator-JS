@@ -5,13 +5,17 @@ node_js:
   - "4.6.0"
   - "0.12.16"
   - "0.10.47"
-  - "0.6"
   - "iojs"
 
 install:
     - npm install
+    - npm install -g codecov
+    - npm install istanbul
   
-script: npm test test/test.js
+script: 
+    - npm test test/test.js
+    - ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec
+    - codecov
   
 after_success:
   - bash <(curl -s https://codecov.io/bash)
