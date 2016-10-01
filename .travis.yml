@@ -1,0 +1,16 @@
+language: node_js
+
+node_js:
+  - "6.x"
+  - "5.x"
+  - "0.12"
+  - "0.6"
+  - "iojs"
+
+install:
+    - npm install
+  
+script: npm test test/test.js
+  
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

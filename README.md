@@ -20,40 +20,70 @@ Exemplo:
 
 # Instalação
 
-A instalação desta biblioteca pode ser feita utilizando o Composer.
-
-    $ composer require tagliatti/boleto-validator
+    $ npm install boleto-validator
 
 # Exemplos de uso
 
 ### Validando convênio
-```php
-<?php
-require_once('./vendor/autoload.php');
-
-use Tagliatti\BoletoValidator\BoletoValidator;
+```js
+var boletoValidator = require('boleto-validator');
 
 // Com mascara
-BoletoValidator::convenio("83640000001-1 33120138000-2 81288462711-6 08013618155-1");
+boletoValidator.convenio("83640000001-1 33120138000-2 81288462711-6 08013618155-1", function(err, isValid) {
+	// true
+});
 
 // Com outro tipo de mascara
-BoletoValidator::convenio("83640000001 1 33120138000 2 81288462711 6 08013618155 1");
+boletoValidator.convenio("83640000001 1 33120138000 2 81288462711 6 08013618155 1", function(err, isValid) {
+	// true
+});
 
 // Sem mascara
-BoletoValidator::convenio("836400000011331201380002812884627116080136181551");
+boletoValidator::convenio("836400000011331201380002812884627116080136181551", function(err, isValid) {
+	// true
+});
 ```
-### Validando fatura ou carnê
-```php
-<?php
-require_once('./vendor/autoload.php');
 
-use Tagliatti\BoletoValidator\BoletoValidator;
+**Utilizando Promise**
+```js
+var boletoValidator = require('boleto-validator/promise');
+
+boletoValidator.convenio("83640000001-1 33120138000-2 81288462711-6 08013618155-1")
+	.then(function(isValid) {
+		// true
+	})
+	.catch(function(err) {
+		// error
+	});
+```
+
+### Validando fatura ou carnê
+```js
+var boletoValidator = require('boleto-validator');
 
 // Com mascara
-BoletoValidator::boleto("42297.11504 00001.954411 60020.034520 2 68610000054659");
+boletoValidator.boleto("42297.11504 00001.954411 60020.034520 2 68610000054659", function(err, isValid) {
+	// true
+});
 
 // Sem mascara
-BoletoValidator::boleto("42297115040000195441160020034520268610000054659");
+boletoValidator.boleto("42297115040000195441160020034520268610000054659", function(err, isValid) {
+	// true
+});
 ```
+
+**Utilizando Promise**
+```js
+var boletoValidator = require('boleto-validator/promise');
+
+boletoValidator.boleto("42297.11504 00001.954411 60020.034520 2 68610000054659")
+	.then(function(isValid) {
+		// true
+	})
+	.catch(function(err) {
+		// error
+	});
+```
+
 # Licença de uso
 Esta biblioteca segue os termos de uso da [The MIT License (MIT)](https://opensource.org/licenses/mit-license.php)

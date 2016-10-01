@@ -1,7 +1,7 @@
 const boletoValidator = require('../promise');
 const assert = require('assert');
 
-describe('Boleto Validator', function () {
+describe('Boleto Validator Promise', function () {
     it ('Convenio valid module 10', function() {
         return boletoValidator.convenio('83640000001-1 33120138000-2 81288462711-6 08013618155-1')
             .then(function (isValid) {
