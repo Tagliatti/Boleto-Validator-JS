@@ -16,6 +16,11 @@
     "boleto",
     "boleto validator"
   ],
+  "files": [
+    "lib",
+    "index.js",
+    "promise.js"
+  ],
   "author": "Filipe Tagliatti <filipetagliatti@gmail.com>",
   "license": "MIT",
   "bugs": {
