@@ -1,7 +1,7 @@
 # Boleto Validator
 
-[![NPM Version][https://img.shields.io/npm/v/boleto-validator.svg]][https://npmjs.org/package/boleto-validator]
-[![Build Status][https://img.shields.io/travis/Tagliatti/Boleto-Validator-JS/master.svg]][https://travis-ci.org/Tagliatti/Boleto-Validator-JS]
+[![NPM Version](https://img.shields.io/npm/v/boleto-validator.svg)](https://npmjs.org/package/boleto-validator)
+[![Build Status](https://img.shields.io/travis/Tagliatti/Boleto-Validator-JS/master.svg)](https://travis-ci.org/Tagliatti/Boleto-Validator-JS)
 [![Coverage Status](https://img.shields.io/codecov/c/github/Tagliatti/Boleto-Validator-JS.svg)](https://codecov.io/github/Tagliatti/Boleto-Validator-JS)
 
 Lib para validação de código de barras e linha digitalizável presente em boletos bancários. Compatível com Node 4.
